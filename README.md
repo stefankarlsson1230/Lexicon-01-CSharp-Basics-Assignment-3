@@ -37,4 +37,18 @@ bottles instead of 1 bottles and 0 bottles.
 ## Optionals
 - Write the numbers in plain text instead of numerical values (Ninety nine
 instead of 99 and so on)
-- Play the music while it prints the verses. [Link to music on wiki](https://en.wikipedia.org/wiki/99_Bottles_of_Beer)
+- Play the music while it prints the verses. [Link to wikipedia](https://en.wikipedia.org/wiki/99_Bottles_of_Beer)
+
+## My Comments
+- To write the numbers in plain text was not too hard with the help of some string arrays.
+- To get the music to play was more of a hassle:
+	- The only soundfile in the link was a .ogg file and to make this play I had do add the 
+	Nuget packages NAudio and NAudio.Vorbis
+	- I had some problems with the application not finding the .ogg file. This I solved by 
+	setting the properties on the .ogg file to "Build Action: Content" and "Copy to Output 
+	Directory: Copy always". The application could not find the file because it was not in 
+	the correct directory after building.
+	- I would have liked the music to loop while the text was written out, but there
+    does not seem to be a simple solution to this, so instead I just slowed down the
+	output of the text somewhat whith Thread.Sleep(75). Not the prettiest solution.
+	- I use "using" on the music player/reader to clean up memory.
