@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="bottles.png" />
+    <File Path="README.md" />
+  </Folder>
   <Project Path="C-Sharp Basic #3/C-Sharp Basic #3.csproj" />
 </Solution>
